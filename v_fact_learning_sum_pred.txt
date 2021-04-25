@@ -1,0 +1,33 @@
+
+--v_fact_learning_sum_pred
+SELECT '2018Q1A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2018Q1) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2018Q2A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2018Q2) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2018Q3A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2018Q3) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2018Q4A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2018Q4) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+
+SELECT '2019Q1A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2019Q1) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2019Q2A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2019Q2) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2019Q3A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2019Q3) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2019Q4A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2019Q4) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+
+SELECT '2020Q1A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2020Q1) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2020Q2A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2020Q2) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2020Q3A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2020Q3) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2020Q4A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2020Q4) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+
+SELECT '2021Q1A' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2021Q1) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 UNION ALL
+SELECT '2021Q2F' AS yr_qtr,age,gender,tenure,empl_type,c_level,emp_size,emp_industry,prof_group,ont,gta,avg_income,life,fee_waiver,mentor,cnt_learning,
+SUM(learning_2021Q2_pred) AS cnt_learner FROM `scs-3760-hkim.term_project.v_dim_learner_pred` GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16

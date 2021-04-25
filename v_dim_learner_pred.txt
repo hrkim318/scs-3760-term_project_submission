@@ -1,0 +1,11 @@
+
+--v_dim_learner_pred
+SELECT
+  t1.*,
+  t2.pred as learning_2021Q2_pred
+FROM
+  `scs-3760-hkim.term_project.v_dim_learner` t1
+LEFT JOIN
+  `scs-3760-hkim.term_project.learning_pred` t2
+ON
+  t1.learner_id = t2.learner_id

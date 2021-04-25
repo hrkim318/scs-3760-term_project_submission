@@ -1,0 +1,30 @@
+
+-- v_dim_learner
+SELECT
+  t1.*,
+
+  coalesce(t2.cnt_learning,0) AS cnt_learning,
+
+  coalesce(t2.learning_2018Q1,0) AS learning_2018Q1,
+  coalesce(t2.learning_2018Q2,0) AS learning_2018Q2,
+  coalesce(t2.learning_2018Q3,0) AS learning_2018Q3,
+  coalesce(t2.learning_2018Q4,0) AS learning_2018Q4,
+
+  coalesce(t2.learning_2019Q1,0) AS learning_2019Q1,
+  coalesce(t2.learning_2019Q2,0) AS learning_2019Q2,
+  coalesce(t2.learning_2019Q3,0) AS learning_2019Q3,
+  coalesce(t2.learning_2019Q4,0) AS learning_2019Q4,
+
+  coalesce(t2.learning_2020Q1,0) AS learning_2020Q1,
+  coalesce(t2.learning_2020Q2,0) AS learning_2020Q2,
+  coalesce(t2.learning_2020Q3,0) AS learning_2020Q3,
+  coalesce(t2.learning_2020Q4,0) AS learning_2020Q4,
+
+  coalesce(t2.learning_2021Q1,0) AS learning_2021Q1
+
+FROM
+  `scs-3760-hkim.term_project.salesforce_contact` t1
+LEFT JOIN
+  `scs-3760-hkim.term_project.v_fact_learning` t2
+ON
+  t1.learner_id = t2.learner_id
